@@ -1,0 +1,53 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 44px 0px;
+  max-width: 90vw;
+}
+
+.navbar__logo {
+  height: 22px;
+}
+
+.navbar__items {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__item {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.825rem;
+}
+
+.navbar__items :not(:last-child) > a {
+  color: #252b46;
+  transition: all 100ms ease-in-out;
+}
+
+.navbar__items :not(:last-child) {
+  margin-right: 42px;
+}
+
+.loginButton {
+  border: 2px solid transparent;
+  background-color: #fa5757;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 30px;
+  transition: all 100ms ease-in-out;
+}
+
+/* ACTIVE STATES */
+
+.navbar__item > a:hover {
+  color: #fa5757;
+}
+
+.loginButton:hover {
+  background-color: white;
+  border-color: #fa5757;
+}
