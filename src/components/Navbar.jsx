@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useScreen } from "../constants";
 import logo from "../assets/logo-bookmark.svg";
 import MenuButton from "./MenuButton";
+import MenuModal from "./MenuModal";
 import "./Navbar.css";
 
 const desktopMenu = (
@@ -34,10 +35,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
-      <img className="navbar__logo" src={logo} alt="bookmark logo" />
-      {sm ? <MenuButton handleToggle={handleToggle} /> : desktopMenu}
-    </nav>
+    <>
+      <nav className="navbar">
+        <img className="navbar__logo" src={logo} alt="bookmark logo" />
+        {sm ? (
+          <MenuButton isToggled={toggle} handleToggle={handleToggle} />
+        ) : (
+          desktopMenu
+        )}
+      </nav>
+      {/*TODO {toggle && <MenuModal />} */}
+    </>
   );
 };
 
