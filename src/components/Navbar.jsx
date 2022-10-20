@@ -29,14 +29,14 @@ const Navbar = () => {
   const { sm } = useScreen();
   const [toggle, setToggle] = useState(false);
 
-  const toggleHandler = () => {
+  const handleToggle = () => {
     setToggle((prev) => !prev);
   };
 
   return (
     <nav className="navbar">
       <img className="navbar__logo" src={logo} alt="bookmark logo" />
-      {sm ? <MenuButton setToggle={toggleHandler} /> : desktopMenu}
+      {sm ? <MenuButton handleToggle={handleToggle} /> : desktopMenu}
     </nav>
   );
 };
