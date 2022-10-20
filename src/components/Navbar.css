@@ -41,13 +41,6 @@
   transition: all 100ms ease-in-out;
 }
 
-.navbar__menu--btn {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 4px;
-}
-
 /* ACTIVE STATES */
 
 .navbar__item > a:hover {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useScreen } from "../constants";
 import logo from "../assets/logo-bookmark.svg";
-import hamburgerIcon from "../assets/icon-hamburger.svg";
+import MenuButton from "./MenuButton";
 import "./Navbar.css";
 
 const desktopMenu = (
@@ -27,21 +27,11 @@ const desktopMenu = (
 
 const Navbar = () => {
   const { sm } = useScreen();
-  const [toggle, setToggle] = useState(false);
 
   return (
     <nav className="navbar">
       <img className="navbar__logo" src={logo} alt="bookmark logo" />
-      {sm ? (
-        <button
-          onClick={() => setToggle((prev) => !prev)}
-          className="navbar__menu--btn"
-        >
-          <img src={hamburgerIcon} alt="hamburger icon" />
-        </button>
-      ) : (
-        desktopMenu
-      )}
+      {sm ? <MenuButton /> : desktopMenu}
     </nav>
   );
 };
