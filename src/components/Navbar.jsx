@@ -1,29 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
+import { useScreen } from "../constants";
 import logo from "../assets/logo-bookmark.svg";
+import hamburgerIcon from "../assets/icon-hamburger.svg";
 import "./Navbar.css";
 
+const desktopMenu = (
+  <div>
+    <ul className="navbar__menu">
+      <li className="navbar__item">
+        <a href="Features">Features</a>
+      </li>
+      <li className="navbar__item">
+        <a href="Pricing">Pricing</a>
+      </li>
+      <li className="navbar__item">
+        <a href="Contact">Contact</a>
+      </li>
+      <li className="navbar__item">
+        <a href="Login" className="loginButton">
+          Login
+        </a>
+      </li>
+    </ul>
+  </div>
+);
+
 const Navbar = () => {
+  const { sm } = useScreen();
+  const [toggle, setToggle] = useState(false);
+
   return (
     <nav className="navbar">
       <img className="navbar__logo" src={logo} alt="bookmark logo" />
-      <div>
-        <ul className="navbar__items">
-          <li className="navbar__item">
-            <a href="Features">Features</a>
-          </li>
-          <li className="navbar__item">
-            <a href="Pricing">Pricing</a>
-          </li>
-          <li className="navbar__item">
-            <a href="Contact">Contact</a>
-          </li>
-          <li className="navbar__item">
-            <a href="Login" className="loginButton">
-              Login
-            </a>
-          </li>
-        </ul>
-      </div>
+      {sm ? (
+        <button
+          onClick={() => setToggle((prev) => !prev)}
+          className="navbar__menu--btn"
+        >
+          <img src={hamburgerIcon} alt="hamburger icon" />
+        </button>
+      ) : (
+        desktopMenu
+      )}
     </nav>
   );
 };
