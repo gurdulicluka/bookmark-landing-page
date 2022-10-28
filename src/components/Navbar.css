@@ -3,8 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 44px 0px;
-  max-width: 90vw;
+  padding: 40px 6vw;
 }
 
 .navbar__logo {
@@ -20,7 +19,7 @@
   list-style-type: none;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 0.825rem;
+  font-size: 0.9rem;
 }
 
 .navbar__menu :not(:last-child) > a {
@@ -33,21 +32,42 @@
 }
 
 .loginButton {
-  border: 2px solid transparent;
+  border: 2px solid #fa5757;
   background-color: #fa5757;
-  color: white;
-  border-radius: 5px;
+  color: #fff;
+  border-radius: 6px;
   padding: 8px 30px;
   transition: all 100ms ease-in-out;
 }
-
-/* ACTIVE STATES */
 
 .navbar__item > a:hover {
   color: #fa5757;
 }
 
 .loginButton:hover {
-  background-color: white;
-  border-color: #fa5757;
+  background-color: #fff;
 }
+
+.bg-blue {
+  background-color: #252b46;
+  opacity: 0.9;
+  animation: 200ms 1 normal fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+/*///BREAKPOINTS///*/
+
+@media (min-width: 1440px) {
+  .navbar {
+    padding: 40px 86px;
+  }
+}
+/*^^^^^^^^^^^^^^^^^^^^^^^*/
