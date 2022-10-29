@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 40px 6vw;
+  padding: 40px 9vw;
 }
 
 .navbar__logo {
@@ -18,8 +18,8 @@
 .navbar__item {
   list-style-type: none;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 0.9rem;
+  font-weight: 400;
+  font-size: 1.8rem;
 }
 
 .navbar__menu :not(:last-child) > a {
@@ -65,9 +65,9 @@
 
 /*///BREAKPOINTS///*/
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .navbar {
-    padding: 40px 86px;
+    padding: 40px 130px;
   }
 }
 /*^^^^^^^^^^^^^^^^^^^^^^^*/
