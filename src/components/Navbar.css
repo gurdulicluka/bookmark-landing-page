@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 40px 9vw;
+  padding: 40px 7.5vw;
 }
 
 .navbar__logo {
@@ -18,8 +18,8 @@
 .navbar__item {
   list-style-type: none;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 1.8rem;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 .navbar__menu :not(:last-child) > a {
@@ -67,7 +67,14 @@
 
 @media (min-width: 1441px) {
   .navbar {
-    padding: 40px 130px;
+    padding: 40px 105px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 /*^^^^^^^^^^^^^^^^^^^^^^^*/
