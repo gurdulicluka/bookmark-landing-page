@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useScreen } from "../constants";
 import logo from "../assets/logo-bookmark.svg";
 import logoWhite from "../assets/logo-bookmark-white.svg";
 import MenuButton from "./MenuButton";
-// import MenuModal from "./MenuModal";
+import facebook from "../assets/icon-facebook.svg";
+import twitter from "../assets/icon-twitter.svg";
 import "./Navbar.css";
 
-const desktopMenu = (
+const menu = (
   <menu className="navbar__menu">
     <li className="navbar__item">
       <a href="Features">Features</a>
@@ -25,31 +26,49 @@ const desktopMenu = (
   </menu>
 );
 
+const menuModal = (
+  <div className="mobile__menuContainer bg-blue animate__animated animate__fadeInUp">
+    {menu}
+    <div className="social">
+      <img src={facebook} alt="facebook" />
+      <img src={twitter} alt="twitter" />
+    </div>
+  </div>
+);
+
 const Navbar = () => {
   const { sm } = useScreen();
-  const [toggle, setToggle] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
 
   const handleToggle = () => {
-    setToggle((prev) => !prev);
+    setIsToggled((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (isToggled) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  }, [isToggled]);
 
   return (
     <>
-      <header>
-        <nav className={`navbar ${toggle ? "bg-blue" : ""}`}>
+      <header className={isToggled ? "bg-blue" : ""}>
+        <nav className="navbar">
           <img
             className="navbar__logo"
-            src={toggle ? logoWhite : logo}
+            src={isToggled ? logoWhite : logo}
             alt="bookmark logo"
           />
           {sm ? (
-            <MenuButton isToggled={toggle} handleToggle={handleToggle} />
+            <MenuButton isToggled={isToggled} handleToggle={handleToggle} />
           ) : (
-            desktopMenu
+            menu
           )}
         </nav>
+        {isToggled ? menuModal : ""}
       </header>
-      {/* TODO Mobile menu fades in beneath navbar over the other content, semi transparent */}
     </>
   );
 };
