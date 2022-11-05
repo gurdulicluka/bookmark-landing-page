@@ -21,12 +21,8 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero__illustration">
-        <img
-          src={hero}
-          alt="computer_screen"
-          className="animate__animated animate__backInRight"
-        />
-        <div className="bg-shape animate__animated animate__slideInRight" />
+        <img src={hero} alt="computer_screen" />
+        <div className="bg-shape" />
       </div>
     </section>
   );
