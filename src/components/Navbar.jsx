@@ -3,37 +3,26 @@ import { useScreen } from "../constants";
 import logo from "../assets/logo-bookmark.svg";
 import logoWhite from "../assets/logo-bookmark-white.svg";
 import MenuButton from "./MenuButton";
-import facebook from "../assets/icon-facebook.svg";
-import twitter from "../assets/icon-twitter.svg";
 import "./Navbar.css";
+import MobileMenu from "./MobileMenu";
 
 const menu = (
   <menu className="navbar__menu">
     <li className="navbar__item">
-      <a href="Features">Features</a>
+      <a href="javascript:void(0)">Features</a>
     </li>
     <li className="navbar__item">
-      <a href="Pricing">Pricing</a>
+      <a href="javascript:void(0)">Pricing</a>
     </li>
     <li className="navbar__item">
-      <a href="Contact">Contact</a>
+      <a href="javascript:void(0)">Contact</a>
     </li>
     <li className="navbar__item">
-      <a href="Login" className="loginButton">
+      <a href="javascript:void(0)" className="loginButton">
         Login
       </a>
     </li>
   </menu>
-);
-
-const menuModal = (
-  <div className="mobile__menuContainer bg-blue animate__animated animate__fadeInUp">
-    {menu}
-    <div className="social">
-      <img src={facebook} alt="facebook" />
-      <img src={twitter} alt="twitter" />
-    </div>
-  </div>
 );
 
 const Navbar = () => {
@@ -67,8 +56,8 @@ const Navbar = () => {
             menu
           )}
         </nav>
-        {isToggled ? menuModal : ""}
       </header>
+      {isToggled && <MobileMenu />}
     </>
   );
 };
