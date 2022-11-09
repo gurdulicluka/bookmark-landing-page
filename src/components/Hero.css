@@ -111,12 +111,6 @@
   }
 }
 
-@media (min-width: 375px) and (max-width: 1020px) {
-  .hero__buttons button {
-    font-size: 1.6rem;
-  }
-}
-
 @media (max-width: 375px) {
   .hero__buttons button {
     padding-left: 1rem;
