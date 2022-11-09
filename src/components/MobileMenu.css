@@ -4,9 +4,8 @@
   left: 0;
   right: 0;
   top: 102px;
-  background-color: #252b46de;
+  background-color: #252b46f7;
   z-index: 9999;
-  animation: 200ms 1 normal fadeIn;
 }
 
 .mobileMenu {
@@ -16,21 +15,17 @@
   margin-top: 1.6rem;
 }
 
-.mobileMenu :not(:last-child) > a {
-  transition: all 200ms ease-in-out;
-}
-
 .mobileMenu__item {
   list-style: none;
   text-align: center;
   width: 80%;
-  border-top: 1px solid white;
+  border-top: 1px solid #4c526c;
   padding: 2rem 0px;
 }
 
 .mobileMenu__item a {
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -67,9 +62,8 @@
   color: #252b46;
   background-color: #fff;
 }
-
-.mobileMenu__item a:active {
-  transform: scale(1.1);
-  transition: 100ms;
-}
 /*  */
+
+.animate__animated.animate__slideInUp {
+  --animate-duration: 200ms;
+}

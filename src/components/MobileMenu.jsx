@@ -5,7 +5,7 @@ import twitter from "../assets/icon-twitter.svg";
 
 const MobileMenu = () => {
   return (
-    <div className="mobileMenu__container">
+    <div className="mobileMenu__container animate__animated animate__slideInUp">
       <menu className="mobileMenu">
         <li className="mobileMenu__item">
           <a href="javascript:void(0)">Features</a>
