@@ -5,6 +5,7 @@ import logoWhite from "../assets/logo-bookmark-white.svg";
 import MenuButton from "./MenuButton";
 import "./Navbar.css";
 import MobileMenu from "./MobileMenu";
+import { createPortal } from "react-dom";
 
 const menu = (
   <menu className="navbar__menu">
@@ -57,7 +58,8 @@ const Navbar = () => {
           )}
         </nav>
       </header>
-      {isToggled && <MobileMenu />}
+      {isToggled &&
+        createPortal(<MobileMenu />, document.getElementById("overlays"))}
     </>
   );
 };
