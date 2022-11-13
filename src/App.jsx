@@ -1,24 +1,12 @@
 import React from "react";
-import {
-  Navbar,
-  Hero,
-  Features,
-  Extensions,
-  FAQ,
-  CTA,
-  Footer,
-} from "./components";
+import { Navbar, Hero, Features } from "./components";
 
 const App = () => {
   return (
-    <div className="container">
+    <div id="container">
       <Navbar />
-      {/* <Hero /> */}
+      <Hero />
       {/* <Features /> */}
-      {/* <Extensions /> */}
-      {/* <FAQ /> */}
-      {/* <CTA /> */}
-      {/* <Footer /> */}
     </div>
   );
 };

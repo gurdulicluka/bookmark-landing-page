@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useScreen } from "../constants";
-import logo from "../assets/logo-bookmark.svg";
-import logoWhite from "../assets/logo-bookmark-white.svg";
-import MenuButton from "./MenuButton";
-import "./Navbar.css";
-import MobileMenu from "./MobileMenu";
 import { createPortal } from "react-dom";
+import { useScreen } from "../../utils/hooks";
+import "./Navbar.css";
+import { bookmark, bookmarkWhite, hamburger, close } from "../../assets";
+import MobileMenu from "./MobileMenu";
 
 const menu = (
   <menu className="navbar__menu">
@@ -25,6 +23,14 @@ const menu = (
     </li>
   </menu>
 );
+
+const MenuButton = ({ handleToggle, isToggled }) => {
+  return (
+    <button onClick={handleToggle} className="navbar__menu--btn">
+      <img src={isToggled ? close : hamburger} alt="hamburger icon" />
+    </button>
+  );
+};
 
 const Navbar = () => {
   const { sm } = useScreen();
@@ -48,7 +54,7 @@ const Navbar = () => {
         <nav className="navbar">
           <img
             className="navbar__logo"
-            src={isToggled ? logoWhite : logo}
+            src={isToggled ? bookmarkWhite : bookmark}
             alt="bookmark logo"
           />
           {sm ? (

@@ -1,9 +1,5 @@
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import Features from "./Features";
-import Extensions from "./Extensions";
-import FAQ from "./FAQ";
-import CTA from "./CTA";
-import Footer from "./Footer";
+import Navbar from "./Navbar/Navbar.jsx";
+import Hero from "./Hero/Hero";
+import Features from "./Features/Features";
 
-export { Navbar, Hero, Features, Extensions, FAQ, CTA, Footer };
+export { Navbar, Hero, Features };

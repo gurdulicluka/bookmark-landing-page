@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   top: 102px;
-  background-color: #252b46f7;
+  background-color: var(--transparentBlue);
   z-index: 9999;
 }
 
@@ -16,7 +16,6 @@
 }
 
 .mobileMenu__item {
-  list-style: none;
   text-align: center;
   width: 80%;
   border-top: 1px solid #4c526c;
@@ -54,15 +53,6 @@
   height: 32px;
   width: auto;
 }
-
-/*  */
-.mobileMenu__loginBtn:active {
-  transform: scale(1.1);
-  transition: 100ms;
-  color: #252b46;
-  background-color: #fff;
-}
-/*  */
 
 .animate__animated.animate__slideInUp {
   --animate-duration: 200ms;

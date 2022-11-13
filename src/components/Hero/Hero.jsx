@@ -1,14 +1,14 @@
 import React from "react";
 import "./Hero.css";
-import hero from "../assets/illustration-hero.svg";
-import Button from "./Button";
+import { hero } from "../../assets";
+import Button from "../Button/Button";
 import "animate.css";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="hero__text">
-        <h1>
+        <h1 className="heading">
           A Simple Bookmark <br /> Manager
         </h1>
         <p>

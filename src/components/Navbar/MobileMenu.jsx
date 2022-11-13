@@ -1,7 +1,7 @@
 import React from "react";
 import "./MobileMenu.css";
-import facebook from "../assets/icon-facebook.svg";
-import twitter from "../assets/icon-twitter.svg";
+import { facebook } from "../../assets";
+import { twitter } from "../../assets";
 
 const MobileMenu = () => {
   return (
