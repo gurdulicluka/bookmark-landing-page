@@ -5,7 +5,7 @@ import { twitter } from "../../assets";
 
 const MobileMenu = () => {
   return (
-    <div className="mobileMenu__container animate__animated animate__slideInUp">
+    <div className="mobileMenu__container bg-blue animate__animated animate__slideInUp">
       <menu className="mobileMenu">
         <li className="mobileMenu__item">
           <a href="javascript:void(0)">Features</a>
