@@ -3,11 +3,14 @@ import { Navbar, Hero, Features } from "./components";
 
 const App = () => {
   return (
-    <div id="container">
-      <Navbar />
-      <Hero />
-      {/* <Features /> */}
-    </div>
+    <>
+      <div className="wrapper">
+        <Navbar />
+        <main className="container">
+          <Hero />
+        </main>
+      </div>
+    </>
   );
 };
 
