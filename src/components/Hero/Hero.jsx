@@ -11,7 +11,7 @@ const Hero = () => {
         <h1 className="heading">
           A Simple Bookmark <br /> Manager
         </h1>
-        <p>
+        <p className="text">
           A clean and simple interface to organize your favorite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>

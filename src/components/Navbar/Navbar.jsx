@@ -50,19 +50,21 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={isToggled ? "bg-blue" : ""}>
-        <nav className="navbar">
-          <img
-            className="navbar__logo"
-            src={isToggled ? bookmarkWhite : bookmark}
-            alt="bookmark logo"
-          />
-          {sm ? (
-            <MenuButton isToggled={isToggled} handleToggle={handleToggle} />
-          ) : (
-            menu
-          )}
-        </nav>
+      <header className={`${isToggled ? "bg-blue" : null}`}>
+        <div className="container">
+          <nav className="navbar">
+            <img
+              className="navbar__logo"
+              src={isToggled ? bookmarkWhite : bookmark}
+              alt="bookmark logo"
+            />
+            {sm ? (
+              <MenuButton isToggled={isToggled} handleToggle={handleToggle} />
+            ) : (
+              menu
+            )}
+          </nav>
+        </div>
       </header>
       {isToggled &&
         createPortal(<MobileMenu />, document.getElementById("overlays"))}

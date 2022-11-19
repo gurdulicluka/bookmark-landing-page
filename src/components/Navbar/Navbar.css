@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  padding: 40px 7.5vw;
+  padding: 40px 0px;
+  padding-right: 2vw;
 }
 
 .navbar__logo {
@@ -17,7 +17,7 @@
 
 .navbar__item a {
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 
@@ -39,6 +39,12 @@
   transition: all 100ms ease-in-out;
 }
 
+.navbar__menu--btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 @media (hover: hover) {
   .navbar__item > a:hover {
     color: var(--softRed);
@@ -48,35 +54,3 @@
     background-color: #fff;
   }
 }
-
-.navbar__menu--btn {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.bg-blue {
-  background-color: var(--transparentBlue);
-}
-
-/*///BREAKPOINTS///*/
-
-@media (min-width: 1441px) {
-  .navbar {
-    padding: 40px 105px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding-left: 36px;
-    padding-right: 36px;
-  }
-}
-@media (max-width: 375px) {
-  .navbar {
-    padding-left: 26px;
-    padding-right: 26px;
-  }
-}
-/*^^^^^^^^^^^^^^^^^^^^^^^*/
