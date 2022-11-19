@@ -43,16 +43,16 @@ button {
   font-weight: 500;
 }
 
-p {
+.text {
   color: var(--grey);
   font-weight: 400;
   line-height: 2.4rem;
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 1.8vw, 2rem);
 }
 
 .heading {
   color: var(--darkBlue);
-  font-size: 4.6rem;
+  font-size: clamp(3.6rem, 3.8vw, 5rem);
 }
 
 .sub-heading {
